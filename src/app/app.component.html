@@ -1,12 +1,41 @@
-<section class="bg-[#64cb00] flex justify-center fixed w-full">
-  <div class="flex gap-4 text-white font-medium h-8 items-center w-4/5 text-lg cursor-pointer">
-    <div class="flex items-center hover:text-black active:text-black">ACCUEIL</div> |
-    <div class="flex items-center hover:text-black active:text-black">PHOTOVOLTAÏQUE</div> |
-    <div class="flex items-center hover:text-black active:text-black">CLIMATISATION</div> |
-    <div class="flex items-center hover:text-black active:text-black">CHAUFFAGE & ECS</div> |
-    <div class="flex items-center hover:text-black active:text-black">PROFESSIONNELS</div> |
-    <div class="flex items-center hover:text-black active:text-black">AIDES ET FINANCEMENTS</div> |
-    <div class="flex items-center hover:text-black active:text-black">CONTACT</div>
+<section class="h-[100vh]">
+  <section class="bg-[#64cb00] flex justify-center w-full">
+    <div
+      class="flex gap-4 text-white font-medium h-8 items-center w-4/5 text-lg cursor-pointer"
+    >
+      <div
+        class="flex items-center hover:text-black active:text-black"
+        routerLink=""
+      >
+        ACCUEIL
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black">
+        PHOTOVOLTAÏQUE
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black">
+        CLIMATISATION
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black">
+        CHAUFFAGE & ECS
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black">
+        PROFESSIONNELS
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black">
+        AIDES ET FINANCEMENTS
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black">
+        CONTACT
+      </div>
+    </div>
+  </section>
+  <div>
+    <router-outlet></router-outlet>
   </div>
 </section>
-<router-outlet></router-outlet>
