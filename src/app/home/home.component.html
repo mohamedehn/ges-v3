@@ -1,23 +1,69 @@
+<!-- First part -->
 <section class="bloc w-full h-full">
-  <div class="flex h-1/2 justify-between w-[80%] m-auto">
-    <p class="border rounded-full h-10 w-44 justify-center flex items-center uppercase">Particuliers</p>
-    <p class="border rounded-full h-10 w-44 justify-center flex items-center uppercase">Professionnels</p>
+  <div class="flex w-full h-[380px]">
+    <img src="assets/particuliers.png" alt="" class="w-1/2 object-cover" />
+    <img src="assets/professionnels.png" alt="" class="w-1/2 object-cover" />
+  </div>
+  <div class="flex justify-around w-full m-auto relative mt-[-80px] mb-20 h-10">
+    <p
+      class="border cursor-pointer rounded-full h-10 w-44 justify-center flex items-center uppercase bg-slate-300 hover:bg-[#64cb00]"
+    >
+      Particuliers
+    </p>
+    <p
+      class="border cursor-pointer rounded-full h-10 w-44 justify-center flex items-center uppercase bg-slate-300 hover:bg-[#64cb00]"
+    >
+      Professionnels
+    </p>
   </div>
   <div class="bloc w-2/3 justify-center m-auto h-1/2">
-    <h2 class="font-bold">VOTRE EXPERT EN ÉNERGIES RENOUVELABLES</h2>
-    <p class="text-justify justify-center">
+    <h2 class="font-bold text-xl">VOTRE EXPERT EN ÉNERGIES RENOUVELABLES</h2>
+    <p class="text-justify justify-center text-lg mt-5">
       Green Energy Solutions, c’est une entreprise qualifiée composée d’experts
       en énergies renouvelables. De l’étude de votre projet à la maintenance en
       passant par l’installation, nous vous proposons des solutions clés-en-main
       pour améliorer votre confort en préservant la planète et en réduisant vos
       factures de manière nette !
     </p>
-    <div class="lg:flex grid grid-cols-2 gap-2 w-full justify-between h-full object-fill m-auto">
-      <img src="assets/qualiPac.png" alt="" class="object-fill w-36 h-36">
-      <img src="assets/qualiPV.jpeg" alt="" class="object-fill w-48 h-48">
-      <img src="assets/qualiSol.png" alt="" class="object-fill w-36 h-36">
-      <img src="assets/qualitEnR.jpeg" alt="" class="object-fill w-36 h-36">
+    <div
+      class="lg:flex grid grid-cols-2 gap-2 w-full justify-between h-full object-fill m-auto"
+    >
+      <img src="assets/qualiPac.png" alt="" class="object-fill w-36 h-36" />
+      <img src="assets/qualiPV.jpeg" alt="" class="object-fill w-48 h-48" />
+      <img src="assets/qualiSol.png" alt="" class="object-fill w-36 h-36" />
+      <img src="assets/qualitEnR.jpeg" alt="" class="object-fill w-36 h-36" />
     </div>
-    <app-button width="500px"></app-button>
   </div>
+</section>
+<!-- Home page articles -->
+<section>
+  <app-article
+    title="Offrez-vous l’autonomie en produisant vous même votre électricité"
+    content="Profitez de l’énergie la moins chère du marché et évitez les augmentations régulière des tarifs
+      réglementés de l’électricité ! Optez pour le soleil et les énergies renouvelables c’est aussi ça la
+      rénovation énergétique. Produisez une énergie verte et donc une source gratuite en installant des
+      panneaux solaires. A vous l’autonomie électrique totale ou partielle !"
+    textBtn="JE SOUHAITE PASSER À L’ÉNERGIE SOLAIRE"
+    image="assets/pv.png">
+  </app-article>
+  <article class="bloc w-full h-full mt-24 mb-24">
+    <h2 class="font-bold text-xl uppercase flex justify-center">
+      Pourquoi faire appel à Green Energy Solutions ?
+    </h2>
+    <div class="flex bg-slate-500 w-full h-[50vh]">
+      <div>Des installateursexpérimentés+10 ansd’expérience</div>
+      <div>Une entreprisequalifiée QualiBat RGE,QualiSol, QualiPV QualiPac, QualiFelec, QualiBat</div>
+      <div>+100 chantiersréalisésACCUEIL</div>
+      <div>Prise en charge complète de votre projet : audit énergétique, installation, entretien, SAV</div>
+    </div>
+  </article>
+  <app-article
+    title="Pompe à chaleur : un système de chauffage économique !"
+    content="En chauffant mieux votre logement, vous chaufferez moins ! Lorsque votre logement est doté
+    d’une pompe à chaleur air-air, d'une pompe à chaleur air-eau, d'une chaudière gaz à condensation ou
+    encore de radiateur nouvelle génération vous chauffez beaucoup moins car ces équipements sont peu
+    énergivores et sont dotés de performances énergétiques très hautes !"
+    textBtn="JE VEUX EN SAVOIR +"
+    image="assets/clim.png">
+  </app-article>
 </section>

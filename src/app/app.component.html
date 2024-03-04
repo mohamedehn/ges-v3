@@ -1,6 +1,6 @@
 <section class="h-[100vh]">
   <img src="assets/logo ges.png" alt="" class="absolute w-48 left-8">
-  <section class="bg-[#64cb00] lg:flex justify-center w-full hidden">
+  <section class="bg-[#64cb00] lg:flex justify-center w-full hidden fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
     >
@@ -36,7 +36,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-[#64cb00] lg:hidden flex w-full justify-center">
+  <section class="bg-[#64cb00] lg:hidden flex w-full justify-center fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-end mr-4"
     >
@@ -48,10 +48,10 @@
   </button>
 
   <!-- Contenu du menu burger -->
-  <div id="burger-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-90">
+  <div id="burger-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-90 z-10">
     <div class="flex justify-end p-4">
       <!-- Bouton pour fermer le menu -->
-      <button id="close-btn" class="text-white p-2 focus:outline-none">
+      <button id="close-btn" class="text-white p-2 focus:outline-none hover:text-[#64cb00]">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
