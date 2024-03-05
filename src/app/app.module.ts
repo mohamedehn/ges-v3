@@ -7,13 +7,17 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
 import { ButtonComponent } from './button/button.component';
+import { SectionComponent } from './section/section.component';
+import { PhotovoltaiqueComponent } from './pages/photovoltaique/photovoltaique.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ArticleComponent,
-    ButtonComponent
+    ButtonComponent,
+    SectionComponent,
+    PhotovoltaiqueComponent
   ],
   imports: [
     BrowserModule,

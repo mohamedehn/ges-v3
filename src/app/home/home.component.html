@@ -35,7 +35,7 @@
     </div>
   </div>
 </section>
-<!-- Home page articles -->
+<!-- Home page 1st article -->
 <section>
   <app-article
     title="Offrez-vous l’autonomie en produisant vous même votre électricité"
@@ -46,17 +46,57 @@
     textBtn="JE SOUHAITE PASSER À L’ÉNERGIE SOLAIRE"
     image="assets/pv.png">
   </app-article>
-  <article class="bloc w-full h-full mt-24 mb-24">
-    <h2 class="font-bold text-xl uppercase flex justify-center">
-      Pourquoi faire appel à Green Energy Solutions ?
-    </h2>
-    <div class="flex bg-slate-500 w-full h-[50vh]">
-      <div>Des installateursexpérimentés+10 ansd’expérience</div>
-      <div>Une entreprisequalifiée QualiBat RGE,QualiSol, QualiPV QualiPac, QualiFelec, QualiBat</div>
-      <div>+100 chantiersréalisésACCUEIL</div>
-      <div>Prise en charge complète de votre projet : audit énergétique, installation, entretien, SAV</div>
+  <!-- Stats sections -->
+  <section class="h-auto mt-10">
+    <div class="bg-gray-400/5 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:max-w-none">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Pourquoi faire appel à Green Energy Solutions ?
+          </h2>
+        </div>
+        <dl class="mt-16 grid grid-cols-1 gap-2 overflow-hidden rounded-3xl text-center sm:grid-cols-2 lg:grid-cols-4">
+          <div class="flex flex-col bg-white p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">
+              Des installateurs expérimentés +10 ans d’expérience
+            </dt>
+            <img class="order-first h-40 w-40 m-auto text-gray-900 object-contain"
+            src="assets/1.png"/>
+          </div>
+          <div class="flex flex-col bg-white p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">
+              Une entreprisequalifiée QualiBat RGE,QualiSol, QualiPV QualiPac, QualiFelec, QualiBat
+            </dt>
+            <img src="assets/2.png" class="order-first text-gray-900 h-40 w-40 m-auto object-contain"/>
+          </div>
+          <div class="flex flex-col bg-white p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">
+              +100 chantiers réalisés ACCUEIL
+            </dt>
+            <img src="assets/3.png" class="order-first h-40 w-40 m-auto text-gray-900 object-contain"/>
+          </div>
+          <div class="flex flex-col bg-white p-8">
+            <dt class="text-sm font-semibold leading-6 text-gray-600">
+              Prise en charge complète de votre projet : audit énergétique, installation, entretien, SAV
+            </dt>
+            <img src="assets/4.png" class="order-first h-40 w-40 m-auto text-gray-900 object-contain"/>
+          </div>
+        </dl>
+      </div>
     </div>
-  </article>
+  </div>
+  </section>
+  <!-- 1st section -->
+  <app-section
+    title="Grâce aux différentes aides, vos travaux vous coûtent moins chers !"
+    content="Nombreuses sont les aides, primes et subventions vous permettant de diminuer votre investissement
+    personnel. Savez-vous que MaPrimeRénov (qui est venue remplacer le Crédit d’Impôt) est ouverte à tous et
+    cumulable avec d’autres aides rénovation énergétique ?"
+    textBtn="JE VEUX CONNAÎTRE LES DIFFÉRENTES AIDES"
+    image="assets/help.png">
+  </app-section>
+<!-- 2nd article -->
   <app-article
     title="Pompe à chaleur : un système de chauffage économique !"
     content="En chauffant mieux votre logement, vous chaufferez moins ! Lorsque votre logement est doté
@@ -66,4 +106,80 @@
     textBtn="JE VEUX EN SAVOIR +"
     image="assets/clim.png">
   </app-article>
+<!-- Testimonials -->
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-xl text-center">
+      <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Ce que disent nos clients
+      </h2>
+    </div>
+    <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+      <div class="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-2">
+        <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+          <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+            <blockquote class="text-gray-900">
+              <p class="text-justify">
+                "Très satisfait par le travail effectué, personnel compétent et très sympathique"
+              </p>
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-x-4">
+              <div>
+                <div class="font-semibold text-gray-900">Raymond M</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+          <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+            <blockquote class="text-gray-900">
+              <p class="text-justify">
+                "Nous avons ma conjointe et moi fait appel à cette entreprise en août 2023 (pose de PAC et de
+                2 splits Bosh). Tous nos échanges se sont déroulés par WhatsApp et avons convenu ensemble
+                d'une date de pose très rapide en accord avec mon budget. Ils sont intervenus tres rapidement
+                et ont faits un travail très propre, très professionnel. Le sens du service et du détail
+                m'ont particulièrement impressionnés. Je recommande très fortement"
+              </p>
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-x-4">
+              <div>
+                <div class="font-semibold text-gray-900">Stéphane N</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+          <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+            <blockquote class="text-gray-900">
+              <p class="text-justify">
+                "Montage rapide. Interlocuteurs sérieux et compétents. Nous recommandons fortement."
+              </p>
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-x-4">
+              <div>
+                <div class="font-semibold text-gray-900">Saloua A</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+          <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+            <blockquote class="text-gray-900">
+              <p class="text-justify">
+                "Je recommande. Entreprise sérieuse, fiable. Installation d'un équipement ce mois-ci et
+                je n'ai rien à redire. Merci encore pour votre professionnalisme et votre réactivité."
+              </p>
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-x-4">
+              <div>
+                <div class="font-semibold text-gray-900">Alisée E</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </section>
