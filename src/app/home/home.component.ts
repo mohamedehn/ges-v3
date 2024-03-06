@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+
+  public stars: number[] = [1, 2, 3, 4, 5];
   constructor() { }
 
   ngOnInit(): void {

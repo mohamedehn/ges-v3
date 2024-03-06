@@ -9,6 +9,7 @@ import { ArticleComponent } from './article/article.component';
 import { ButtonComponent } from './button/button.component';
 import { SectionComponent } from './section/section.component';
 import { PhotovoltaiqueComponent } from './pages/photovoltaique/photovoltaique.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PhotovoltaiqueComponent } from './pages/photovoltaique/photovoltaique.c
     ArticleComponent,
     ButtonComponent,
     SectionComponent,
-    PhotovoltaiqueComponent
+    PhotovoltaiqueComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
