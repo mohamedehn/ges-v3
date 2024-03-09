@@ -10,6 +10,7 @@ import { ButtonComponent } from './button/button.component';
 import { SectionComponent } from './section/section.component';
 import { PhotovoltaiqueComponent } from './pages/photovoltaique/photovoltaique.component';
 import { ContentComponent } from './content/content.component';
+import { ChauffageEcsComponent } from './pages/chauffage-ecs/chauffage-ecs.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContentComponent } from './content/content.component';
     ButtonComponent,
     SectionComponent,
     PhotovoltaiqueComponent,
-    ContentComponent
+    ContentComponent,
+    ChauffageEcsComponent
   ],
   imports: [
     BrowserModule,
