@@ -32,4 +32,10 @@ export class AppComponent implements OnInit{
       });
     }
   }
+
+  closeBurgerMenu() {
+    if (this.burgerMenu) {
+      this.burgerMenu.classList.add('hidden');
+    }
+  }
 }

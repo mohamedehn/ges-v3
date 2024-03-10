@@ -16,15 +16,19 @@
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black">
-        CLIMATISATION
+        BORNE DE RECHARGE
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black" routerLink="chauffage-ecs">
-        CHAUFFAGE & ECS
+        CLIM & CHAUFFAGE
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black">
-        PROFESSIONNELS
+        ISOLATION
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black">
+        VENTILATION
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black">
@@ -60,25 +64,28 @@
 
     <!-- Options du menu burger -->
     <div class="flex flex-col items-center">
-      <div class="text-white hover:text-[#64cb00] py-2" routerLink="">
+      <div class="text-white hover:text-[#64cb00] py-2" routerLink="" (click)="closeBurgerMenu()">
         ACCUEIL
       </div>
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique">
         PHOTOVOLTAÏQUE
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2">
-        CLIMATISATION
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+        BORNE DE RECHARGE
       </div>
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="chauffage-ecs">
-        CHAUFFAGE & ECS
+        CLIM & CHAUFFAGE
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2">
-        PROFESSIONNELS
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+        ISOLATION
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2">
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+        VENTILATION
+      </div>
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
         AIDES
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2">
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
         CONTACT
       </div>
     </div>
