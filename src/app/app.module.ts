@@ -11,6 +11,7 @@ import { SectionComponent } from './section/section.component';
 import { PhotovoltaiqueComponent } from './pages/photovoltaique/photovoltaique.component';
 import { ContentComponent } from './content/content.component';
 import { ChauffageEcsComponent } from './pages/chauffage-ecs/chauffage-ecs.component';
+import { VentilationComponent } from './pages/ventilation/ventilation.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChauffageEcsComponent } from './pages/chauffage-ecs/chauffage-ecs.compo
     SectionComponent,
     PhotovoltaiqueComponent,
     ContentComponent,
-    ChauffageEcsComponent
+    ChauffageEcsComponent,
+    VentilationComponent
   ],
   imports: [
     BrowserModule,

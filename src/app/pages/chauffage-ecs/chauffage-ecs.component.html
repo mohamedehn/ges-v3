@@ -6,9 +6,9 @@
       </h2>
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
         <div>
-          <img src="assets/clim2.png" alt="Product screenshot" class="w-[35rem] object-contain sm:w-[57rem] md:-ml-4 lg:-ml-0 h-[40rem]" width="2432" height="642">
+          <img src="assets/clim2.png" alt="Product screenshot" class="w-full object-contain md:-ml-4 lg:-ml-0 md:rounded-tl-[10rem] mt-20">
           <div class="text-lg leading-8 text-gray-600 flex justify-center">
-            <app-button buttonText="JE REMPLACE MES ÉQUIPEMENTS" width="400px"></app-button>
+            <app-button buttonText="JE REMPLACE MES ÉQUIPEMENTS" width="400px" class="mt-20"></app-button>
           </div>
         </div>
         <div class="lg:pr-8 lg:pt-4">
@@ -47,7 +47,21 @@
       </div>
     </div>
   </div>
-  <div class="overflow-hidden bg-white py-16 sm:py-0 sm:pb-10 sm:mt-40">
+  <app-article
+    title="Chauffe-eau Thermodynamique : divisez votre facture par 5 !"
+    content="La production d’eau chaude sanitaire représente en moyenne 15% des dépenses
+    énergétiques d’un foyer. Le chauffe-eau thermodynamique est équipé d’une pompe à chaleur intégrée qui consiste à
+    capter les calories présentent dans l’air pour les transmettre à l’eau du ballon. Pour 1kwH
+    consommé il en produit 3,7 ce qui réduit drastiquement vos consommations d’énergies. CET à haut rendement, quels sont les avantages?
+    Il existe des CET encore plus performants,leur coefficient de performance est de 4 voire
+    même 5 ce qui signifie que pour 1 kWh d’énergie consommée, ils produisent 4 /5 kWh
+    d’énergie pour chauffer l’ECS. Pour un même volume chauffé, vous divisez votre facture par
+    4/5. Votre installation est 4/5 fois plus rentable que votre cumulus ou ballon électrique actuel !
+    l’équipement chauffe beaucoup plus vite et consomme moins d’énergie."
+    textBtn="je me renseigne sur le CET"
+    image="assets/chauffe.png"
+  ></app-article>
+  <!-- <div class="overflow-hidden bg-white py-16 sm:py-0 sm:pb-10 sm:mt-40">
     <div class="mx-auto px-6 lg:px-8">
       <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl flex justify-center">
         Chauffe-eau Thermodynamique : divisez votre facture par 5 !
@@ -110,7 +124,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="overflow-hidden bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
@@ -145,8 +159,25 @@
             </dl>
           </div>
         </div>
-        <img src="assets/solaire.png" alt="Product screenshot" class="w-[35rem] object-contain mt-10 max-w-none sm:w-[42rem] md:-ml-4 lg:-ml-0 h-[35rem]">
+        <img src="assets/solaire.png" alt="Product screenshot" class="w-full object-contain mt-10 max-w-none md:rounded-tr-[10rem] md:-ml-4 lg:-ml-0">
       </div>
     </div>
   </div>
+  <app-section
+    title="PAC Géothermique : peu connu et pourtant plus performant !"
+    content="Géo-Thermie, la chaleur de la terre. La terre emmagasine de
+    l’énergie. En surface, elle reçoit l’énergie du soleil, de la pluie, du
+    vent. Plus en profondeur, la chaleur provient des roches et du
+    magma qui forment le noyau terrestre. Il s’agit donc d’une énergie
+    gratuite, locale et renouvelable.
+    Pour autant, cette énergie n’est pas directement exploitable et
+    c’est le rôle de la pompe à chaleur. Son rôle est de permettre une
+    élévation de la température entre les deux sources.
+    Les performances de la PAC géothermique sont constantes sur
+    l’année car la température du sol varie peu. Il n’y a donc pas besoin
+    d’une énergie d’appoint contrairement aux PAC air-air ou air-eau
+    dont les performances sont plus météo-sensibles."
+    textBtn="+ d'infos sur la PAC géothermique"
+    image="assets/pacgeo.png"
+  ></app-section>
 </section>
