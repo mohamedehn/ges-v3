@@ -8,6 +8,8 @@ import { VentilationComponent } from './pages/ventilation/ventilation.component'
 import { IsolationComponent } from './pages/isolation/isolation.component';
 import { AidesComponent } from './pages/aides/aides.component';
 import { ProComponent } from './pages/pro/pro.component';
+import { IrveComponent } from './pages/irve/irve.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -17,7 +19,8 @@ const routes: Routes = [
   { path: 'chauffage-ecs', component: ChauffageEcsComponent },
   { path: 'professionnels', component: ProComponent },
   { path: 'aides', component: AidesComponent },
-  // { path: 'contact'}
+  { path: 'irve', component: IrveComponent },
+  { path: 'contact', component: ContactComponent}
 ];
 
 @NgModule({

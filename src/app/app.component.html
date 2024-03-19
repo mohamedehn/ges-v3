@@ -15,7 +15,7 @@
         PHOTOVOLTAÏQUE
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black">
+      <div class="flex items-center hover:text-black active:text-black" routerLink="irve">
         BORNE DE RECHARGE
       </div>
       |
@@ -35,7 +35,7 @@
         AIDES
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black">
+      <div class="flex items-center hover:text-black active:text-black" routerLink="contact">
         CONTACT
       </div>
     </div>
@@ -70,7 +70,7 @@
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique">
         PHOTOVOLTAÏQUE
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="irve">
         BORNE DE RECHARGE
       </div>
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="chauffage-ecs" (click)="closeBurgerMenu()">
@@ -85,10 +85,10 @@
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="aides">
         AIDES
       </div>
-      <div class="flex items-center hover:text-black active:text-black" routerLink="professionnels">
+      <div class="flex items-center hover:text-black active:text-black" routerLink="professionnels" (click)="closeBurgerMenu()">
         PROFESSIONNELS
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
         CONTACT
       </div>
     </div>
