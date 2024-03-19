@@ -12,6 +12,9 @@ import { PhotovoltaiqueComponent } from './pages/photovoltaique/photovoltaique.c
 import { ContentComponent } from './content/content.component';
 import { ChauffageEcsComponent } from './pages/chauffage-ecs/chauffage-ecs.component';
 import { VentilationComponent } from './pages/ventilation/ventilation.component';
+import { IsolationComponent } from './pages/isolation/isolation.component';
+import { AidesComponent } from './pages/aides/aides.component';
+import { ProComponent } from './pages/pro/pro.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { VentilationComponent } from './pages/ventilation/ventilation.component'
     PhotovoltaiqueComponent,
     ContentComponent,
     ChauffageEcsComponent,
-    VentilationComponent
+    VentilationComponent,
+    IsolationComponent,
+    AidesComponent,
+    ProComponent
   ],
   imports: [
     BrowserModule,
