@@ -1,21 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
-  title = 'Green Energy Solutions';
-
-  burgerBtn: HTMLElement | null | undefined;
-  closeBtn: HTMLElement | null | undefined;
-  burgerMenu: HTMLElement | null | undefined;
+export class AppComponent implements AfterViewInit{
+  public burgerBtn: HTMLElement | null | undefined;
+  public closeBtn: HTMLElement | null | undefined;
+  public burgerMenu: HTMLElement | null | undefined;
 
   constructor() {
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.burgerBtn = document.getElementById('burger-btn');
     this.closeBtn = document.getElementById('close-btn');
     this.burgerMenu = document.getElementById('burger-menu');
@@ -31,6 +29,8 @@ export class AppComponent implements OnInit{
         this.burgerMenu?.classList.add('hidden');
       });
     }
+
+
   }
 
   closeBurgerMenu() {

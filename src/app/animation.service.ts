@@ -1,20 +1,12 @@
-import { AfterViewInit, ChangeDetectorRef, Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 declare var anime: any;
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+@Injectable({
+  providedIn: 'root'
 })
-export class HomeComponent implements AfterViewInit {
-  public stars: number[] = [1, 2, 3, 4, 5];
-  constructor(private cdRef: ChangeDetectorRef) {}
+export class AnimationService {
 
-  ngAfterViewInit(): void {
-    window.scrollTo(0, 0);
-    this.observeElements('.an-1', this.animate);
-    this.cdRef.detectChanges();
-  }
+  constructor() { }
 
   observeElements(selector: string, callback: () => void): void {
     const elements = document.querySelectorAll(selector);
@@ -31,9 +23,9 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-  animate(): void {
+  animate(selector: string): void {
     // Animation du paragraphe
-    const paragraphWrapper: any = document.querySelectorAll('.an-1');
+    const paragraphWrapper: any = document.querySelectorAll(selector);
     paragraphWrapper.forEach((paragraphWrapper: any) => {
       paragraphWrapper.innerHTML = paragraphWrapper.textContent.replace(
         /\S/g,
@@ -42,11 +34,10 @@ export class HomeComponent implements AfterViewInit {
     });
 
     anime.timeline({ loop: false }).add({
-      targets: '.an-1 .letter',
+      targets: `${selector} .letter`,
       opacity: [0, 1],
       easing: 'easeInOutQuad',
       duration: 2300,
     });
   }
-
 }
