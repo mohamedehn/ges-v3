@@ -24,9 +24,8 @@ export class AnimationService {
   }
 
   animate(selector: string): void {
-    // Animation du paragraphe
-    const paragraphWrapper: any = document.querySelectorAll(selector);
-    paragraphWrapper.forEach((paragraphWrapper: any) => {
+    const elementWrapper: any = document.querySelectorAll(selector);
+    elementWrapper.forEach((paragraphWrapper: any) => {
       paragraphWrapper.innerHTML = paragraphWrapper.textContent.replace(
         /\S/g,
         "<span class='letter'>$&</span>"

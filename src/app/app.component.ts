@@ -29,8 +29,6 @@ export class AppComponent implements AfterViewInit{
         this.burgerMenu?.classList.add('hidden');
       });
     }
-
-
   }
 
   closeBurgerMenu() {

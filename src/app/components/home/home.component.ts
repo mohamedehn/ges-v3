@@ -13,6 +13,10 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
     this.animationService.animate('.an-1');
+    const imageElement = document.querySelector('.fade-in');
+    imageElement?.addEventListener('load', () => {
+      imageElement.classList.add('loaded');
+    });
     this.cdRef.detectChanges();
   }
 
