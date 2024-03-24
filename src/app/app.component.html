@@ -1,5 +1,5 @@
 <section class="h-[100vh]">
-  <img src="assets/logo-ges.webp" alt="" class="absolute w-48 left-[85%] z-10">
+  <img src="assets/logo-ges.webp" alt="" class="absolute w-48 right-0 top-0 bottom-0 mb-auto z-10">
   <section class="bg-[#64cb00] lg:flex justify-center w-full hidden fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
@@ -35,12 +35,16 @@
         AIDES
       </div>
       |
+      <div class="flex items-center hover:text-black active:text-black" routerLink="professionnels">
+        PRO
+      </div>
+      |
       <div class="flex items-center hover:text-black active:text-black" routerLink="contact">
         CONTACT
       </div>
     </div>
   </section>
-  <section class="bg-[#64cb00] lg:hidden flex w-full justify-center fixed z-20">
+  <section class="bg-[#64cb00] xl:hidden flex w-full justify-center fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-end mr-4"
     >
@@ -67,7 +71,7 @@
       <div class="text-white hover:text-[#64cb00] py-2" routerLink="" (click)="closeBurgerMenu()">
         ACCUEIL
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique">
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique" (click)="closeBurgerMenu()" >
         PHOTOVOLTAÏQUE
       </div>
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="irve">
