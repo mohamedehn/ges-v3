@@ -20,10 +20,12 @@ export class ArticleComponent implements AfterViewInit{
     this.content = this.content;
     this.image = this.image;
     this.textBtn = this.textBtn;
-    this.animationService.animate('.an-1');
-    const imageElement = document.querySelector('.fade-in');
-    imageElement?.addEventListener('load', () => {
-      imageElement.classList.add('loaded');
+    this.animationService.observeAndAnimate('.an-1');
+    const imageElement = document.querySelectorAll('.fade-in');
+    imageElement?.forEach((element) => {
+      element.addEventListener('load', () => {
+        element.classList.add('loaded');
+      });
     });
     this.cdRef.detectChanges();
   }

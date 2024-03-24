@@ -8,16 +8,18 @@ import { AnimationService } from 'src/app/animation.service';
 })
 export class HomeComponent implements AfterViewInit {
   public stars: number[] = [1, 2, 3, 4, 5];
+
   constructor(private cdRef: ChangeDetectorRef, private animationService: AnimationService) {}
 
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
-    this.animationService.animate('.an-1');
-    const imageElement = document.querySelector('.fade-in');
-    imageElement?.addEventListener('load', () => {
-      imageElement.classList.add('loaded');
+    this.animationService.observeAndAnimate('.an-1');
+    const imageElement = document.querySelectorAll('.fade-in');
+    imageElement?.forEach((element) => {
+      element.addEventListener('load', () => {
+        element.classList.add('loaded');
+      });
     });
     this.cdRef.detectChanges();
   }
-
 }

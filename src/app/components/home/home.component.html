@@ -1,40 +1,30 @@
 <!-- First part -->
 <section class="bloc w-full h-full">
-  <div class="flex w-full h-[530px]">
-    <!-- <link rel="preload" href="assets/particuliers.webp" as="image">
-    <link rel="preload" href="assets/particuliers.webp" as="image" type="image/webp"> -->
-    <img src="assets/banniere.jpg" alt="" class="w-full h-full object-fill" loading="lazy" />
-    <!-- <img src="assets/professionnels.webp" alt="" class="w-1/2 h-full object-cover" loading="lazy"/> -->
+  <div class="flex w-full h-[520px]">
+    <link rel="preload" href="assets/banniere.webp" as="image" type="image/jpg">
+    <img src="assets/banniere.webp" alt="" class="w-full h-full object-cover" loading="lazy" />
   </div>
-  <div class="flex justify-around w-full m-auto relative mt-[-80px] mb-20 h-10">
-    <p
-      class="an-1 border cursor-pointer rounded-full h-10 w-44 justify-center flex items-center uppercase bg-slate-300 hover:bg-[#64cb00]"
-     routerLink="">
-      Particuliers
-    </p>
-    <p
-      class="an-1 border cursor-pointer rounded-full h-10 w-44 justify-center flex items-center uppercase bg-slate-300 hover:bg-[#64cb00]"
-     routerLink="professionnels">
-      Professionnels
-    </p>
+  <div class="lg:flex grid grid-cols-2 gap-6 w-full justify-end bottom-44 h-full object-fill m-auto relative mb-[-144px]">
+    <img src="assets/qualiPac.png" alt="" class="object-fill w-40 h-36" />
+    <img src="assets/qualiPV.png" alt="" class="object-fill w-40 h-36" />
+    <img src="assets/qualitEnR.png" alt="" class="object-fill w-40 h-36" />
   </div>
-  <div class="bloc w-2/3 justify-center m-auto h-1/2 container">
+  <div class="bloc w-2/3 justify-center m-auto h-1/2 container mt-10">
     <h2 class="font-bold text-xl an-1">VOTRE EXPERT EN ÉNERGIES RENOUVELABLES</h2>
-    <p class="an-1 text-justify justify-center text-lg mt-5 an-2">
+    <p class="an-1 text-animation text-justify justify-center text-lg mt-5 an-2">
       Green Energy Solutions, c’est une entreprise qualifiée composée d’experts
       en énergies renouvelables. De l’étude de votre projet à la maintenance en
       passant par l’installation, nous vous proposons des solutions clés-en-main
       pour améliorer votre confort en préservant la planète et en réduisant vos
       factures de manière nette !
     </p>
-    <div
+    <!-- <div
       class="lg:flex grid grid-cols-2 gap-2 w-full justify-between h-full object-fill m-auto"
     >
       <img src="assets/qualiPac.webp" alt="" class="object-fill w-36 h-36" />
       <img src="assets/qualiPV.webp" alt="" class="object-fill w-48 h-48" />
-      <!-- <img src="assets/qualiSol.webp" alt="" class="object-fill w-36 h-36" /> -->
       <img src="assets/qualitEnR.webp" alt="" class="object-fill w-36 h-36" />
-    </div>
+    </div> -->
   </div>
 </section>
 <!-- Home page 1st article -->
@@ -61,29 +51,29 @@
         </div>
         <dl class="animation mt-16 grid grid-cols-1 gap-2 overflow-hidden rounded-3xl text-center sm:grid-cols-2 lg:grid-cols-4">
           <div class="flex flex-col bg-white p-8 hover:scale-110 cursor-pointer">
-            <dt class="text-sm font-semibold leading-6 text-gray-600">
+            <dt class="an-1 text-sm font-semibold leading-6 text-gray-600">
               Des installateurs expérimentés +10 ans d’expérience
             </dt>
-            <img class="order-first h-40 w-40 m-auto text-gray-900 object-contain"
+            <img class="fade-in order-first h-40 w-40 m-auto text-gray-900 object-contain"
             src="assets/1.webp"/>
           </div>
           <div class="flex flex-col bg-white p-8 hover:scale-110 cursor-pointer">
-            <dt class="text-sm font-semibold leading-6 text-gray-600">
+            <dt class="an-1 text-sm font-semibold leading-6 text-gray-600">
               Une entreprisequalifiée QualiBat RGE,QualiSol, QualiPV QualiPac, QualiFelec, QualiBat
             </dt>
-            <img src="assets/2.webp" class="order-first text-gray-900 h-40 w-40 m-auto object-contain"/>
+            <img src="assets/2.webp" class="fade-in order-first text-gray-900 h-40 w-40 m-auto object-contain"/>
           </div>
           <div class="flex flex-col bg-white p-8 hover:scale-110 cursor-pointer">
-            <dt class="text-sm font-semibold leading-6 text-gray-600">
+            <dt class="an-1 text-sm font-semibold leading-6 text-gray-600">
               +100 chantiers réalisés
             </dt>
-            <img src="assets/3.webp" class="order-first h-40 w-40 m-auto text-gray-900 object-contain"/>
+            <img src="assets/3.webp" class="fade-in order-first h-40 w-40 m-auto text-gray-900 object-contain"/>
           </div>
           <div class="flex flex-col bg-white p-8 hover:scale-110 cursor-pointer">
-            <dt class="text-sm font-semibold leading-6 text-gray-600">
+            <dt class="an-1 text-sm font-semibold leading-6 text-gray-600">
               Prise en charge complète de votre projet : audit énergétique, installation, entretien, SAV
             </dt>
-            <img src="assets/4.webp" class="order-first h-40 w-40 m-auto text-gray-900 object-contain"/>
+            <img src="assets/4.webp" class="fade-in order-first h-40 w-40 m-auto text-gray-900 object-contain"/>
           </div>
         </dl>
       </div>

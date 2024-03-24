@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { AnimationService } from 'src/app/animation.service';
 
 @Component({
   selector: 'app-ventilation',
@@ -6,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ventilation.component.scss'],
 })
 export class VentilationComponent implements OnInit {
-  constructor() {}
+  constructor(private animationService: AnimationService, private cdRef: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
+    this.animationService.observeAndAnimate('.an-1');
+    const imageElement = document.querySelectorAll('.fade-in');
+    imageElement?.forEach((element) => {
+      element.addEventListener('load', () => {
+        element.classList.add('loaded');
+      });
+    });
+    this.cdRef.detectChanges();
   }
 }
