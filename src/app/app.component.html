@@ -95,11 +95,47 @@
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
         CONTACT
       </div>
+      <div class="text-white hover:text-[#64cb00] mt-20 active:text-black py-2" (click)="closeBurgerMenu()">
+        Mentions légales
+      </div>
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
+        Cookies
+      </div>
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+        <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
+      </div>
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+        ©Copyright 2024 Green Energy Solutions - Tous droits réservés
+      </div>
     </div>
   </div>
   </div>
   </section>
   <div>
     <router-outlet></router-outlet>
+    <section class="bg-[#64cb00] lg:flex justify-center w-full  bottom-0 z-20 hidden">
+      <div
+      class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
+    >
+      <div
+        class="flex items-center hover:text-black active:text-black text-sm"
+        routerLink=""
+      >
+        ©Copyright 2024 Green Energy Solutions - Tous droits réservés
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+        Mentions légales
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+        Cookies
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black text-sm">
+        <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
+      </div>
+    </div>
+    </section>
   </div>
 </section>
