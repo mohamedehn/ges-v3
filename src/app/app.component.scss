@@ -1,0 +1,16 @@
+/* Définir l'animation flyInOut */
+@keyframes flyInOut {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Appliquer l'animation flyInOut */
+[flyInOut] {
+  animation: flyInOut 0.2s ease-out;
+}

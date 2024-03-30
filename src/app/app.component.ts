@@ -1,16 +1,19 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements AfterViewInit{
   public burgerBtn: HTMLElement | null | undefined;
   public closeBtn: HTMLElement | null | undefined;
   public burgerMenu: HTMLElement | null | undefined;
+  public dropdownOpen = false;
+  public dropdownOpenSolutions = false;
 
-  constructor() {
+  constructor(private cdRef: ChangeDetectorRef) {
   }
 
   ngAfterViewInit(): void {
@@ -29,8 +32,28 @@ export class AppComponent implements AfterViewInit{
         this.burgerMenu?.classList.add('hidden');
       });
     }
+  }
 
+  closeDropdownSolutions() {
+    this.dropdownOpenSolutions = false;
+    this.cdRef.detectChanges();
+  }
 
+  toggleDropdownSolutions() {
+    this.dropdownOpenSolutions = !this.dropdownOpenSolutions;
+    this.dropdownOpen = false;
+    this.cdRef.detectChanges();
+  }
+
+  closeDropdown() {
+    this.dropdownOpen = false;
+    this.cdRef.detectChanges();
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+    this.dropdownOpenSolutions = false;
+    this.cdRef.detectChanges();
   }
 
   closeBurgerMenu() {

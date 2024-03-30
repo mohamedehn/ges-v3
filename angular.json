@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "optimization": true,
             "outputPath": "dist/ges-v3",
             "index": "src/index.html",
             "main": "src/main.ts",

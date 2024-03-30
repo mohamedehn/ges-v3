@@ -1,5 +1,5 @@
 <section class="h-[100vh]">
-  <img src="assets/logo ges.png" alt="" class="absolute w-48 left-8 z-10">
+  <img src="assets/logo-ges.webp" alt="" class="absolute w-60 right-0 top-0 bottom-0 mb-auto z-10">
   <section class="bg-[#64cb00] lg:flex justify-center w-full hidden fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
@@ -11,28 +11,114 @@
         ACCUEIL
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black" routerLink="photovoltaique">
-        PHOTOVOLTAÏQUE
+      <div class="relative">
+        <button type="button" (click)="toggleDropdownSolutions()" class="inline-flex items-center gap-x-1 text-lg leading-6 uppercase font-medium hover:text-black active:text-black" aria-expanded="false">
+          <span>Nos solutions</span>
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+          <div class="w-screen max-w-sm flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 transition ease-out duration-200" [@flyInOut] *ngIf="dropdownOpenSolutions">
+            <div class="relative rounded-lg p-4" routerLink="photovoltaique" (click)="closeDropdownSolutions()">
+              <div class="hover:text-[#64cb00] text-base font-semibold text-gray-900">
+                Photovoltaïque
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Découvrez nos solutions photovoltaïques pour une transition énergétique durable et rentable.
+              </p>
+            </div>
+            <div class="relative rounded-lg p-4">
+              <div routerLink="irve" class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" (click)="closeDropdownSolutions()">
+                Borne de recharge
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Une solution pratique et écologique pour votre mobilité électrique.
+              </p>
+            </div>
+            <div class="relative rounded-lg p-4">
+              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" routerLink="chauffage-ecs" (click)="closeDropdownSolutions()">
+                Climatisation et chauffage
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Des solutions efficaces pour des espaces agréables, quelles que soient les conditions météorologiques.
+              </p>
+            </div>
+            <div class="relative rounded-lg p-4">
+              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" routerLink="isolation" (click)="closeDropdownSolutions()">
+                Isolation
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Pour une maison chaleureuse en hiver et fraîche en été, tout en économisant sur vos factures énergétiques.
+              </p>
+            </div>
+            <div class="relative rounded-lg p-4">
+              <div href="#" class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" routerLink="ventilation" (click)="closeDropdownSolutions()">
+                Ventilation
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Respirez un air pur et sain pour un environnement plus confortable et une vie plus sereine.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black" routerLink="irve">
-        BORNE DE RECHARGE
+      <div class="relative">
+        <button type="button" (click)="toggleDropdown()" class="inline-flex items-center gap-x-1 text-lg leading-6 uppercase font-medium hover:text-black active:text-black" aria-expanded="false">
+          <span>Nos métiers</span>
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+          <div class="w-screen max-w-sm flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 transition ease-out duration-200" [@flyInOut] *ngIf="dropdownOpen">
+            <div class="relative rounded-lg p-4" (click)="closeDropdown()" routerLink="">
+              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base">
+                  Audit et ingénierie
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Transformez votre consommation en une source d'économie durable pour un avenir énergétique plus vert.
+              </p>
+            </div>
+            <div class="relative rounded-lg p-4" routerLink="" (click)="closeDropdown()">
+              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base ">
+                 Installation et mise en service
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Transformez vos idées en réalité, avec une expertise fiable et un service de qualité.
+              </p>
+            </div>
+            <div class="relative rounded-lg p-4" (click)="closeDropdown()" routerLink="">
+              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" >
+                Maintenance et SAV
+                <span class="absolute inset-0"></span>
+              </div>
+              <p class="mt-1 text-gray-600">
+                Maintenance et SAV dédié : tranquillité d'esprit garantie pour un fonctionnement optimal.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black" routerLink="chauffage-ecs">
-        CLIM & CHAUFFAGE
-      </div>
-      |
-      <div class="flex items-center hover:text-black active:text-black" routerLink="isolation">
-        ISOLATION
-      </div>
-      |
-      <div class="flex items-center hover:text-black active:text-black" routerLink="ventilation">
-        VENTILATION
-      </div>
+      <a href="#realisation" class="flex items-center hover:text-black active:text-black">
+        NOS REALISATIONS
+      </a>
       |
       <div class="flex items-center hover:text-black active:text-black" routerLink="aides">
         AIDES
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black" routerLink="professionnels">
+        PRO
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black" routerLink="contact">
@@ -40,7 +126,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-[#64cb00] lg:hidden flex w-full justify-center fixed z-20">
+  <section class="bg-[#64cb00] xl:hidden flex w-full justify-center fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-end mr-4"
     >
@@ -67,7 +153,7 @@
       <div class="text-white hover:text-[#64cb00] py-2" routerLink="" (click)="closeBurgerMenu()">
         ACCUEIL
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique">
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique" (click)="closeBurgerMenu()" >
         PHOTOVOLTAÏQUE
       </div>
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="irve">
@@ -91,11 +177,47 @@
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
         CONTACT
       </div>
+      <div class="text-white hover:text-[#64cb00] mt-20 active:text-black py-2" (click)="closeBurgerMenu()">
+        Mentions légales
+      </div>
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
+        Cookies
+      </div>
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+        <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
+      </div>
+      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+        ©Copyright 2024 Green Energy Solutions - Tous droits réservés
+      </div>
     </div>
   </div>
   </div>
   </section>
   <div>
     <router-outlet></router-outlet>
+    <section class="bg-[#64cb00] lg:flex justify-center w-full  bottom-0 z-20 hidden">
+      <div
+      class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
+    >
+      <div
+        class="flex items-center hover:text-black active:text-black text-sm"
+        routerLink=""
+      >
+        ©Copyright 2024 Green Energy Solutions - Tous droits réservés
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+        Mentions légales
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+        Cookies
+      </div>
+      |
+      <div class="flex items-center hover:text-black active:text-black text-sm">
+        <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
+      </div>
+    </div>
+    </section>
   </div>
 </section>
