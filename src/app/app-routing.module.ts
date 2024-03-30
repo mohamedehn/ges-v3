@@ -9,6 +9,7 @@ import { AidesComponent } from './pages/aides/aides.component';
 import { ProComponent } from './pages/pro/pro.component';
 import { IrveComponent } from './pages/irve/irve.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { WorksComponent } from './pages/works/works.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'professionnels', component: ProComponent },
   { path: 'aides', component: AidesComponent },
   { path: 'irve', component: IrveComponent },
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent },
+  { path: 'metiers', component: WorksComponent}
 ];
 
 @NgModule({
