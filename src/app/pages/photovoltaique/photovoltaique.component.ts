@@ -1,10 +1,11 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AnimationService } from 'src/app/animation.service';
 
 @Component({
   selector: 'app-photovoltaique',
   templateUrl: './photovoltaique.component.html',
-  styleUrls: ['./photovoltaique.component.scss']
+  styleUrls: ['./photovoltaique.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PhotovoltaiqueComponent implements OnInit{
 

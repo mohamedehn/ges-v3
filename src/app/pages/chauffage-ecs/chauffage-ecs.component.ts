@@ -1,10 +1,11 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AnimationService } from 'src/app/animation.service';
 
 @Component({
   selector: 'app-chauffage-ecs',
   templateUrl: './chauffage-ecs.component.html',
   styleUrls: ['./chauffage-ecs.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChauffageEcsComponent implements OnInit {
   constructor(private animationService: AnimationService, private cdRef: ChangeDetectorRef) {}

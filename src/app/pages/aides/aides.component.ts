@@ -1,10 +1,11 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { AnimationService } from 'src/app/animation.service';
 
 @Component({
   selector: 'app-aides',
   templateUrl: './aides.component.html',
-  styleUrls: ['./aides.component.scss']
+  styleUrls: ['./aides.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AidesComponent implements OnInit{
 
