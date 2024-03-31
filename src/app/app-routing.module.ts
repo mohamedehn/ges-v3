@@ -10,6 +10,8 @@ import { ProComponent } from './pages/pro/pro.component';
 import { IrveComponent } from './pages/irve/irve.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WorksComponent } from './pages/works/works.component';
+import { MentionsComponent } from './pages/mentions/mentions.component';
+import { CookiesComponent } from './pages/cookies/cookies.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -21,7 +23,9 @@ const routes: Routes = [
   { path: 'aides', component: AidesComponent },
   { path: 'irve', component: IrveComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'metiers', component: WorksComponent}
+  { path: 'metiers', component: WorksComponent },
+  { path: 'mentions', component: MentionsComponent },
+  { path: 'cookies', component: CookiesComponent}
 ];
 
 @NgModule({

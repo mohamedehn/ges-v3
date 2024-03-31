@@ -56,6 +56,56 @@ export class AppComponent implements AfterViewInit {
       description: "Maintenance et SAV dédié : tranquillité d'esprit garantie pour un fonctionnement optimal."
     }
   ];
+  public burgerLinks = [
+    {
+      title: 'Accueil',
+      link: ''
+    },
+    {
+      title: 'Photovoltaïque',
+      link: 'photovoltaique'
+    },
+    {
+      title: 'Bornes de recharge',
+      link: 'irve'
+    },
+    {
+      title: 'Clim et chauffage',
+      link: 'chauffage-ecs'
+    },
+    {
+      title: 'Isolation',
+      link: 'isolation'
+    },
+    {
+      title: 'Ventilation',
+      link: 'ventilation'
+    },
+    {
+      title: 'Nos Métiers',
+      link: 'metiers'
+    },
+    {
+      title: 'Aides',
+      link: 'aides'
+    },
+    {
+      title: 'Professionnels',
+      link: 'professionnels'
+    },
+    {
+      title: 'Contact',
+      link: 'contact'
+    },
+    {
+      title: 'Mentions légales',
+      link: 'mentions'
+    },
+    {
+      title: 'Cookies',
+      link: 'cookies'
+    }
+  ]
 
   constructor(private cdRef: ChangeDetectorRef) {
   }

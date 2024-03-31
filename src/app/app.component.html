@@ -96,41 +96,10 @@
 
     <!-- Options du menu burger -->
     <div class="flex flex-col items-center">
-      <div class="text-white hover:text-[#64cb00] py-2" routerLink="" (click)="closeBurgerMenu()">
-        ACCUEIL
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique" (click)="closeBurgerMenu()" >
-        PHOTOVOLTAÏQUE
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="irve">
-        BORNE DE RECHARGE
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="chauffage-ecs" (click)="closeBurgerMenu()">
-        CLIM & CHAUFFAGE
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="isolation">
-        ISOLATION
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="ventilation">
-        VENTILATION
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="metiers">
-        NOS METIERS
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="aides">
-        AIDES
-      </div>
-      <div class="flex items-center hover:text-black active:text-black" routerLink="professionnels" (click)="closeBurgerMenu()">
-        PROFESSIONNELS
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
-        CONTACT
-      </div>
-      <div class="text-white hover:text-[#64cb00] mt-20 active:text-black py-2" (click)="closeBurgerMenu()">
-        Mentions légales
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
-        Cookies
+      <div *ngFor="let options of burgerLinks">
+        <div class="text-white hover:text-[#64cb00] py-2" (click)="closeBurgerMenu()" routerLink="{{options.link}}">
+          {{ options.title }}
+        </div>
       </div>
       <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
         <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
@@ -143,6 +112,7 @@
   </div>
   </section>
   <div>
+    <app-pop-up-cookies></app-pop-up-cookies>
     <router-outlet></router-outlet>
     <section class="bg-[#64cb00] lg:flex justify-center w-full  bottom-0 z-20 hidden">
       <div
@@ -155,11 +125,11 @@
         ©Copyright 2024 Green Energy Solutions - Tous droits réservés
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="mentions">
         Mentions légales
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="cookies">
         Cookies
       </div>
       |

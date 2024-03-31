@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input:focus {
+  outline: none; // Supprimer l'outline par défaut
+  border-color: #64cb00; // Couleur de la bordure au focus
+  box-shadow: 0 0 0 2px #64cb00; // Ombre portée au focus
+}
+
+textarea:focus {
+  outline: none; // Supprimer l'outline par défaut
+  border-color: #64cb00; // Couleur de la bordure au focus
+  box-shadow: 0 0 0 2px #64cb00; // Ombre portée au focus
+}
