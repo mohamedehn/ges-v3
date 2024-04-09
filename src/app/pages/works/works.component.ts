@@ -3,17 +3,16 @@ import { ActivatedRoute } from '@angular/router';
 import { AnimationService } from 'src/app/animation.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-works',
+  templateUrl: './works.component.html',
+  styleUrls: ['./works.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements AfterViewInit {
-  public stars: number[] = [1, 2, 3, 4, 5];
+export class WorksComponent implements AfterViewInit {
 
   constructor(
-    private cdRef: ChangeDetectorRef,
     private animationService: AnimationService,
+    private cdRef: ChangeDetectorRef,
     private route : ActivatedRoute
   ) { }
 

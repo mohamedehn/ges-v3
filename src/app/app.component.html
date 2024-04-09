@@ -1,12 +1,12 @@
 <section class="h-[100vh]">
   <img src="assets/logo-ges.webp" alt="" class="absolute w-60 right-0 top-0 bottom-0 mb-auto z-10">
-  <section class="bg-[#64cb00] lg:flex justify-center w-full hidden fixed z-20">
+  <section class="bg-[#4c7d3f] lg:flex justify-center w-full hidden fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
     >
       <div
         class="flex items-center hover:text-black active:text-black"
-        routerLink=""
+        [routerLink]="['']" fragment="accueil"
       >
         ACCUEIL
       </div>
@@ -20,49 +20,13 @@
         </button>
         <div class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
           <div class="w-screen max-w-sm flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 transition ease-out duration-200" [@flyInOut] *ngIf="dropdownOpenSolutions">
-            <div class="relative rounded-lg p-4" routerLink="photovoltaique" (click)="closeDropdownSolutions()">
-              <div class="hover:text-[#64cb00] text-base font-semibold text-gray-900">
-                Photovoltaïque
+            <div *ngFor="let solution of solutions" class="relative rounded-lg p-4" routerLink="{{solution.link}}" (click)="closeDropdownSolutions()">
+              <div class="hover:text-[#4c7d3f] text-base font-semibold text-gray-900">
+                {{ solution.title }}
                 <span class="absolute inset-0"></span>
               </div>
               <p class="mt-1 text-gray-600">
-                Découvrez nos solutions photovoltaïques pour une transition énergétique durable et rentable.
-              </p>
-            </div>
-            <div class="relative rounded-lg p-4">
-              <div routerLink="irve" class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" (click)="closeDropdownSolutions()">
-                Borne de recharge
-                <span class="absolute inset-0"></span>
-              </div>
-              <p class="mt-1 text-gray-600">
-                Une solution pratique et écologique pour votre mobilité électrique.
-              </p>
-            </div>
-            <div class="relative rounded-lg p-4">
-              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" routerLink="chauffage-ecs" (click)="closeDropdownSolutions()">
-                Climatisation et chauffage
-                <span class="absolute inset-0"></span>
-              </div>
-              <p class="mt-1 text-gray-600">
-                Des solutions efficaces pour des espaces agréables, quelles que soient les conditions météorologiques.
-              </p>
-            </div>
-            <div class="relative rounded-lg p-4">
-              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" routerLink="isolation" (click)="closeDropdownSolutions()">
-                Isolation
-                <span class="absolute inset-0"></span>
-              </div>
-              <p class="mt-1 text-gray-600">
-                Pour une maison chaleureuse en hiver et fraîche en été, tout en économisant sur vos factures énergétiques.
-              </p>
-            </div>
-            <div class="relative rounded-lg p-4">
-              <div href="#" class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" routerLink="ventilation" (click)="closeDropdownSolutions()">
-                Ventilation
-                <span class="absolute inset-0"></span>
-              </div>
-              <p class="mt-1 text-gray-600">
-                Respirez un air pur et sain pour un environnement plus confortable et une vie plus sereine.
+                {{ solution.description }}
               </p>
             </div>
           </div>
@@ -78,40 +42,22 @@
         </button>
         <div class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
           <div class="w-screen max-w-sm flex-auto rounded-3xl bg-white p-4 text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 transition ease-out duration-200" [@flyInOut] *ngIf="dropdownOpen">
-            <div class="relative rounded-lg p-4" (click)="closeDropdown()" routerLink="">
-              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base">
-                  Audit et ingénierie
+            <div *ngFor="let work of works" class="relative rounded-lg p-4" (click)="closeDropdown()" [routerLink]="['/metiers']" fragment="{{work.fragment}}">
+              <div class="font-semibold text-gray-900 hover:text-[#4c7d3f] text-base">
+                {{ work.title }}
                 <span class="absolute inset-0"></span>
               </div>
               <p class="mt-1 text-gray-600">
-                Transformez votre consommation en une source d'économie durable pour un avenir énergétique plus vert.
-              </p>
-            </div>
-            <div class="relative rounded-lg p-4" routerLink="" (click)="closeDropdown()">
-              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base ">
-                 Installation et mise en service
-                <span class="absolute inset-0"></span>
-              </div>
-              <p class="mt-1 text-gray-600">
-                Transformez vos idées en réalité, avec une expertise fiable et un service de qualité.
-              </p>
-            </div>
-            <div class="relative rounded-lg p-4" (click)="closeDropdown()" routerLink="">
-              <div class="font-semibold text-gray-900 hover:text-[#64cb00] text-base" >
-                Maintenance et SAV
-                <span class="absolute inset-0"></span>
-              </div>
-              <p class="mt-1 text-gray-600">
-                Maintenance et SAV dédié : tranquillité d'esprit garantie pour un fonctionnement optimal.
+                {{ work.description }}
               </p>
             </div>
           </div>
         </div>
       </div>
       |
-      <a href="#realisation" class="flex items-center hover:text-black active:text-black">
+      <div [routerLink]="['']" fragment="realisation" class="flex items-center hover:text-black active:text-black">
         NOS REALISATIONS
-      </a>
+      </div>
       |
       <div class="flex items-center hover:text-black active:text-black" routerLink="aides">
         AIDES
@@ -126,7 +72,7 @@
       </div>
     </div>
   </section>
-  <section class="bg-[#64cb00] xl:hidden flex w-full justify-center fixed z-20">
+  <section class="bg-[#4c7d3f] lg:hidden flex w-full justify-center fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-end mr-4"
     >
@@ -141,7 +87,7 @@
   <div id="burger-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-90 z-10">
     <div class="flex justify-end p-4">
       <!-- Bouton pour fermer le menu -->
-      <button id="close-btn" class="text-white p-2 focus:outline-none hover:text-[#64cb00]">
+      <button id="close-btn" class="text-white p-2 focus:outline-none hover:text-[#4c7d3f]">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
@@ -150,43 +96,15 @@
 
     <!-- Options du menu burger -->
     <div class="flex flex-col items-center">
-      <div class="text-white hover:text-[#64cb00] py-2" routerLink="" (click)="closeBurgerMenu()">
-        ACCUEIL
+      <div *ngFor="let options of burgerLinks">
+        <div class="text-white hover:text-[#4c7d3f] py-2" (click)="closeBurgerMenu()" routerLink="{{options.link}}">
+          {{ options.title }}
+        </div>
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="photovoltaique" (click)="closeBurgerMenu()" >
-        PHOTOVOLTAÏQUE
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="irve">
-        BORNE DE RECHARGE
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" routerLink="chauffage-ecs" (click)="closeBurgerMenu()">
-        CLIM & CHAUFFAGE
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="isolation">
-        ISOLATION
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="ventilation">
-        VENTILATION
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="aides">
-        AIDES
-      </div>
-      <div class="flex items-center hover:text-black active:text-black" routerLink="professionnels" (click)="closeBurgerMenu()">
-        PROFESSIONNELS
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
-        CONTACT
-      </div>
-      <div class="text-white hover:text-[#64cb00] mt-20 active:text-black py-2" (click)="closeBurgerMenu()">
-        Mentions légales
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()" routerLink="contact">
-        Cookies
-      </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+      <div class="text-white hover:text-[#4c7d3f]  active:text-black py-2" (click)="closeBurgerMenu()">
         <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
       </div>
-      <div class="text-white hover:text-[#64cb00]  active:text-black py-2" (click)="closeBurgerMenu()">
+      <div class="text-white hover:text-[#4c7d3f]  active:text-black py-2" (click)="closeBurgerMenu()">
         ©Copyright 2024 Green Energy Solutions - Tous droits réservés
       </div>
     </div>
@@ -194,8 +112,9 @@
   </div>
   </section>
   <div>
+    <app-pop-up-cookies></app-pop-up-cookies>
     <router-outlet></router-outlet>
-    <section class="bg-[#64cb00] lg:flex justify-center w-full  bottom-0 z-20 hidden">
+    <section class="bg-[#4c7d3f] lg:flex justify-center w-full  bottom-0 z-20 hidden">
       <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
     >
@@ -206,11 +125,11 @@
         ©Copyright 2024 Green Energy Solutions - Tous droits réservés
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="mentions">
         Mentions légales
       </div>
       |
-      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="">
+      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="cookies">
         Cookies
       </div>
       |

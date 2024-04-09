@@ -17,6 +17,10 @@ import { AidesComponent } from './pages/aides/aides.component';
 import { ProComponent } from './pages/pro/pro.component';
 import { IrveComponent } from './pages/irve/irve.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { WorksComponent } from './pages/works/works.component';
+import { MentionsComponent } from './pages/mentions/mentions.component';
+import { CookiesComponent } from './pages/cookies/cookies.component';
+import { PopUpCookiesComponent } from './components/pop-up-cookies/pop-up-cookies.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { ContactComponent } from './pages/contact/contact.component';
     AidesComponent,
     ProComponent,
     IrveComponent,
-    ContactComponent
+    ContactComponent,
+    WorksComponent,
+    MentionsComponent,
+    CookiesComponent,
+    PopUpCookiesComponent
   ],
   imports: [
     BrowserModule,
