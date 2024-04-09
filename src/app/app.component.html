@@ -1,18 +1,18 @@
 <section class="h-[100vh]">
-  <img src="assets/logo-ges.webp" alt="" class="absolute w-60 right-0 top-0 bottom-0 mb-auto z-10">
+  <img src="assets/logoges.webp" alt="" class="absolute w-60 top-0 bottom-0 mb-auto z-10">
   <section class="bg-[#4c7d3f] lg:flex justify-center w-full hidden fixed z-20">
     <div
       class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
     >
       <div
-        class="flex items-center hover:text-black active:text-black"
+        class="flex items-center hover:text-black active:text-black text-lg"
         [routerLink]="['']" fragment="accueil"
       >
-        ACCUEIL
+        Accueil
       </div>
       |
       <div class="relative">
-        <button type="button" (click)="toggleDropdownSolutions()" class="inline-flex items-center gap-x-1 text-lg leading-6 uppercase font-medium hover:text-black active:text-black" aria-expanded="false">
+        <button type="button" (click)="toggleDropdownSolutions()" class="inline-flex items-center gap-x-1 text-lg leading-6 font-medium hover:text-black active:text-black" aria-expanded="false">
           <span>Nos solutions</span>
           <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -34,7 +34,7 @@
       </div>
       |
       <div class="relative">
-        <button type="button" (click)="toggleDropdown()" class="inline-flex items-center gap-x-1 text-lg leading-6 uppercase font-medium hover:text-black active:text-black" aria-expanded="false">
+        <button type="button" (click)="toggleDropdown()" class="inline-flex items-center gap-x-1 text-lg leading-6 font-medium hover:text-black active:text-black" aria-expanded="false">
           <span>Nos métiers</span>
           <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
@@ -56,19 +56,19 @@
       </div>
       |
       <div [routerLink]="['']" fragment="realisation" class="flex items-center hover:text-black active:text-black">
-        NOS REALISATIONS
+        Nos réalisations
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black" routerLink="aides">
-        AIDES
+        Aides
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black" routerLink="professionnels">
-        PRO
+        Pro
       </div>
       |
       <div class="flex items-center hover:text-black active:text-black" routerLink="contact">
-        CONTACT
+        Contact
       </div>
     </div>
   </section>
