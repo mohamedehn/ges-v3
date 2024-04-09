@@ -100,23 +100,22 @@
         </div>
       </div>
       <div class="mt-10 flex m-auto w-1/2">
-        <ng-container *ngIf="isCookiesAccepted? cookiesNotAccepted : cookiesNotAccepted">
+        <ng-container *ngIf="isCookiesAccepted; else cookiesNotAccepted">
           <button
             type="submit"
+            [ngClass]="{'cursor-not-allowed': !isCookiesAccepted}"
             [disabled]="!isCookiesAccepted"
             class="cursor-pointer block w-full rounded-md bg-[#4c7d3f] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#4c7d3f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
           >
             Envoyer
           </button>
         </ng-container>
-        <ng-template #cookiesNotAccepted>
-          <div class="text-md leading-8 text-gray-900">
-            <button (click)="acceptCookies($event)">Merci d'accepter au préalable les cookies en cliquant ici</button>
-          </div>
-        </ng-template>
       </div>
     </form>
   </div>
-
-
+  <ng-template #cookiesNotAccepted>
+    <div class="bg-gray-100 p-4 mt-4 text-md leading-8 text-gray-900">
+      <button (click)="acceptCookies($event)">Merci d'accepter au préalable les cookies en cliquant ici</button>
+    </div>
+  </ng-template>
 </section>

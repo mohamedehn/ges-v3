@@ -12,6 +12,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { WorksComponent } from './pages/works/works.component';
 import { MentionsComponent } from './pages/mentions/mentions.component';
 import { CookiesComponent } from './pages/cookies/cookies.component';
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'metiers', component: WorksComponent },
   { path: 'mentions', component: MentionsComponent },
-  { path: 'cookies', component: CookiesComponent}
+  { path: 'cookies', component: CookiesComponent },
+  { path: 'confirmation', component: ConfirmationComponent}
 ];
 
 @NgModule({

@@ -18,9 +18,14 @@ export class ContactComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
-    const cookiesAccepted = document.cookie.split(';').find(cookie => cookie.trim().startsWith('cookiesAccepted='));
-    const isAccepted = cookiesAccepted && cookiesAccepted.split('=')[1] === 'true';
-    this.isCookiesAccepted = Boolean(isAccepted);
+
+    const accepted = localStorage.getItem('cookiesAccepted') === 'true';
+    const notAccepted = localStorage.getItem('cookiesAccepted') === 'false';
+
+    if (accepted)this.isCookiesAccepted = true;
+    if (notAccepted)this.isCookiesAccepted = false;
+    console.log(this.isCookiesAccepted);
+
 
     this.animationService.observeAndAnimate('.an-1');
     const imageElement = document.querySelectorAll('.fade-in');

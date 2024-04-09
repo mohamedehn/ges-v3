@@ -21,6 +21,7 @@ import { WorksComponent } from './pages/works/works.component';
 import { MentionsComponent } from './pages/mentions/mentions.component';
 import { CookiesComponent } from './pages/cookies/cookies.component';
 import { PopUpCookiesComponent } from './components/pop-up-cookies/pop-up-cookies.component';
+import { ConfirmationComponent } from './pages/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PopUpCookiesComponent } from './components/pop-up-cookies/pop-up-cookie
     WorksComponent,
     MentionsComponent,
     CookiesComponent,
-    PopUpCookiesComponent
+    PopUpCookiesComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

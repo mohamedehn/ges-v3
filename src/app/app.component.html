@@ -104,7 +104,7 @@
       <div class="text-white hover:text-[#4c7d3f]  active:text-black py-2" (click)="closeBurgerMenu()">
         <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
       </div>
-      <div class="text-white hover:text-[#4c7d3f]  active:text-black py-2" (click)="closeBurgerMenu()">
+      <div class="text-white hover:text-[#4c7d3f]  active:text-black py-2 text-sm" (click)="closeBurgerMenu()">
         ©Copyright 2024 Green Energy Solutions - Tous droits réservés
       </div>
     </div>
@@ -114,29 +114,24 @@
   <div>
     <app-pop-up-cookies></app-pop-up-cookies>
     <router-outlet></router-outlet>
-    <section class="bg-[#4c7d3f] lg:flex justify-center w-full  bottom-0 z-20 hidden">
-      <div
-      class="flex gap-4 text-white font-medium h-8 items-center w-full text-lg cursor-pointer justify-center"
-    >
-      <div
-        class="flex items-center hover:text-black active:text-black text-sm"
-        routerLink=""
-      >
-        ©Copyright 2024 Green Energy Solutions - Tous droits réservés
+    <section class="fixed bottom-0 w-full z-20 bg-[#4c7d3f] text-white font-medium h-8 text-lg cursor-pointer justify-center hidden lg:flex">
+      <div class="flex gap-4 items-center w-full justify-center">
+        <div class="hover:text-black active:text-black text-sm">
+          © Copyright 2024 Green Energy Solutions - Tous droits réservés
+        </div>
+        |
+        <div class="hover:text-black active:text-black text-sm" routerLink="mentions">
+          Mentions légales
+        </div>
+        |
+        <div class="hover:text-black active:text-black text-sm" routerLink="cookies">
+          Cookies
+        </div>
+        |
+        <div class="hover:text-black active:text-black text-sm">
+          <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
+        </div>
       </div>
-      |
-      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="mentions">
-        Mentions légales
-      </div>
-      |
-      <div class="flex items-center hover:text-black active:text-black text-sm" routerLink="cookies">
-        Cookies
-      </div>
-      |
-      <div class="flex items-center hover:text-black active:text-black text-sm">
-        <a href="https://www.codingcorp.fr/">Powered by Coding Corp</a>
-      </div>
-    </div>
     </section>
   </div>
 </section>
